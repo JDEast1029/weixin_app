@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/type/type",
+    "pages/car/car",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eb615c",
+    "navigationBarTitleText": "小卖铺",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#eb615c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "icons/icon-home.png",
+        "selectedIconPath": "icons/icon-home-selected.png"
+      },
+      {
+        "pagePath": "pages/type/type",
+        "text": "分类",
+        "iconPath": "icons/icon-type.png",
+        "selectedIconPath": "icons/icon-type-selected.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "icons/icon-shop.png",
+        "selectedIconPath": "icons/icon-shop-selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/icon-user.png",
+        "selectedIconPath": "icons/icon-user-selected.png"
+      }
+    ]
+  }
+}
