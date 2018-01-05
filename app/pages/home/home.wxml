@@ -12,4 +12,5 @@
       </swiper-item>
     </block>
   </swiper>
+  <button bindtap='add'>{{homeInfo.count}}</button>
 </scroll-view>

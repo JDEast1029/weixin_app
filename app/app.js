@@ -1,5 +1,7 @@
-//app.js
-App({
+import configureStore from './configureStore';
+import { Provider } from './libs/wechat-redux/wechat-weapp-redux';
+
+const appConfig = {
   onLaunch: function (options) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -45,4 +47,7 @@ App({
   globalData: {
     userInfo: null
   }
-})
+}
+
+//app.js
+App(Provider(configureStore())(appConfig));

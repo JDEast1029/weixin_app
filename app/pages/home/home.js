@@ -1,7 +1,11 @@
 // pages/home/home.js
-Page({
+import { bindActionCreators } from '../../libs/redux/redux';
+import { connect } from '../../libs/wechat-redux/wechat-weapp-redux';
+import * as actions from '../../actions/home';
+import * as types from '../../constants/actions/home';
 
-  /**
+const pageConfig = {
+/**
    * 页面的初始数据
    */
   data: {
@@ -66,5 +70,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 点击增加
+  add: function () {
+    this.actions.test(1)
   }
+}
+
+const mapStateToData = (state,ownProps)=> ({
+  homeInfo: state.homeReducer
 })
+
+const mapDispatchToPage = (dispatch, ownProps) => ({
+	actions: bindActionCreators(actions, dispatch)
+});
+
+const nextPageConfig = connect(mapStateToData, mapDispatchToPage)(pageConfig)
+
+Page(nextPageConfig)
